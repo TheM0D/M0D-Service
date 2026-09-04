@@ -1,0 +1,202 @@
+/* Definición de colores por defecto (Modo Claro) */
+:root {
+    --bg-body: #f4f4f9;
+    --text-main: #333333;
+    --bg-section: #ffffff;
+    --text-h2: #1a1a2e;
+    --border-color: #e1e1e8;
+    --border-hover: #0f3460;
+    --bg-card: #ffffff;
+    --text-muted: #666666;
+    --text-content: #555555;
+    --border-content: #eeeeee;
+    --plus-color: #0f3460;
+    --notice-bg: #fff3cd;
+    --notice-border: #ffc107;
+    --notice-text: #856404;
+    --footer-color: #777777;
+
+    --header-bg: #f43b0dbc;
+    --header-text-p: #242048;
+    --service-color: #251f3d; /* En modo claro será morado (igual al texto del párrafo) */
+}
+
+/* Detección automática del Modo Oscuro del dispositivo */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body: #121218;
+        --text-main: #e1e1e6;
+        --bg-section: #1a1a24;
+        --text-h2: #ffffff;
+        --border-color: #2a2a3c;
+        --border-hover: #4a6fa5;
+        --bg-card: #1a1a24;
+        --text-muted: #a0a0b0;
+        --text-content: #cccccc;
+        --border-content: #2a2a3c;
+        --plus-color: #4a6fa5;
+        --notice-bg: #332b12;
+        --notice-border: #d4a300;
+        --notice-text: #ffdf7e;
+        --footer-color: #888899;
+
+        --header-bg: #251f3d;
+        --header-text-p: #df6445;
+        --service-color: #df6445; /* En modo oscuro será el rojo desaturado (igual al texto del párrafo) */
+    }
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    background: var(--bg-body); 
+    color: var(--text-main); 
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header flotante y redondeado dinámico */
+header { 
+    background: var(--header-bg); 
+    color: white; 
+    padding: 30px 20px; 
+    text-align: center; 
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+
+header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+header p { 
+    margin: 10px 0 0; 
+    color: var(--header-text-p); 
+    font-weight: bold; 
+    transition: color 0.3s;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 0 15px; }
+
+/* Secciones generales */
+section { 
+    background: var(--bg-section); 
+    margin-bottom: 20px; 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    transition: background 0.3s;
+}
+
+h2 { 
+    color: var(--text-h2); 
+    border-bottom: 2px solid var(--border-content); 
+    padding-bottom: 10px; 
+    margin-top: 0; 
+}
+
+.subtitle {
+    color: var(--text-muted); 
+    font-size: 14px; 
+    margin-bottom: 20px;
+}
+
+/* Estilo de los cuadrados desplegables */
+.service-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--border-hover);
+}
+
+details {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-h2);
+    outline: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Indicador visual personalizado (+) */
+summary::after {
+    content: "+";
+    font-size: 22px;
+    color: var(--plus-color);
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.service-content {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-content);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-content);
+}
+
+.service-content ul {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+.service-content li {
+    margin-bottom: 8px;
+}
+
+.notice { 
+    background: var(--notice-bg); 
+    border-left: 4px solid var(--notice-border); 
+    padding: 12px; 
+    margin-top: 15px; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    color: var(--notice-text); 
+}
+
+.btn-whatsapp { 
+    display: block; 
+    background: #25d366; 
+    color: white; 
+    text-align: center; 
+    padding: 12px 20px; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    font-size: 16px; 
+    margin-top: 20px; 
+    transition: background 0.3s; 
+}
+
+.btn-whatsapp:hover { background: #1ebe5d; }
+
+footer { 
+    text-align: center; 
+    padding: 20px; 
+    color: var(--footer-color); 
+    font-size: 13px; 
+}
+
+/* Clase para el cambio de color dinámico en la palabra Service */
+.service-highlight {
+    color: var(--service-color);
+    transition: color 0.3s;
+}

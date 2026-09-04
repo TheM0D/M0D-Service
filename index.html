@@ -4,108 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M0D Service - Soporte Técnico en Recoleta</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #f4f4f9; color: #333; }
-        
-        /* Header flotante y redondeado */
-        header { 
-            background: #1a1a2e; 
-            color: white; 
-            padding: 30px 20px; 
-            text-align: center; 
-            max-width: 800px;
-            margin: 0 auto 25px auto;
-            border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
-        header p { margin: 10px 0 0; color: #ff6b6b; font-weight: bold; }
-
-        .container { max-width: 800px; margin: 0 auto; padding: 0 15px; }
-        
-        /* Secciones generales */
-        section { background: white; margin-bottom: 20px; padding: 25px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h2 { color: #1a1a2e; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-top: 0; }
-
-        /* Estilo de los cuadrados desplegables */
-        .service-card {
-            background: #ffffff;
-            border: 2px solid #e1e1e8;
-            border-radius: 10px;
-            margin-bottom: 12px;
-            overflow: hidden;
-            transition: border-color 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: #0f3460;
-        }
-
-        details {
-            padding: 15px 20px;
-            cursor: pointer;
-        }
-
-        summary {
-            font-size: 18px;
-            font-weight: bold;
-            color: #1a1a2e;
-            outline: none;
-            list-style-type: none; /* Quita la flecha por defecto en algunos navegadores */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Indicador visual personalizado (+) */
-        summary::after {
-            content: "+";
-            font-size: 22px;
-            color: #0f3460;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-
-        details[open] summary::after {
-            transform: rotate(45deg); /* Gira el "+" a una "x" cuando se abre */
-        }
-
-        .service-content {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-            font-size: 15px;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .service-content ul {
-            padding-left: 20px;
-            margin: 10px 0 0 0;
-        }
-
-        .service-content li {
-            margin-bottom: 8px;
-        }
-
-        .notice { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin-top: 15px; border-radius: 4px; font-size: 14px; color: #856404; }
-        .btn-whatsapp { display: block; background: #25d366; color: white; text-align: center; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; margin-top: 20px; transition: background 0.3s; }
-        .btn-whatsapp:hover { background: #1ebe5d; }
-        footer { text-align: center; padding: 20px; color: #777; font-size: 13px; }
-    </style>
+    <!-- Vinculamos la hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>M0D Service</h1>
-        <p>Soporte Técnico Especializado en Recoleta</p>
-    </header>
+    
+<header>
+    <img src="logo.svg" alt="Logo de M0D Service" style="width: 120px; height: 120px; border-radius: 20px; margin-bottom: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+<h1><span style="color: #ffffff;">M0D</span> <span class="service-highlight">Service</span></h1>
+    <p>Soporte Técnico Especializado en Recoleta</p>
+</header>
     
     <div class="container">
         <section>
             <h2>💻 Catálogo de Servicios y Tarifas</h2>
-            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Haz clic en cada categoría para desplegar los detalles y precios:</p>
+            <p class="subtitle">Haz clic en cada categoría para desplegar los detalles y precios:</p>
 
             <!-- Cuadrado 1: Periféricos -->
             <div class="service-card">
@@ -129,7 +42,7 @@
                     <div class="service-content">
                         <p>Ideal para notebooks lentos, con tirones o llenos de archivos basura:</p>
                         <ul>
-                            <li>Eliminación completa de virus, malware y programas basura (*bloatware*).</li>
+                            <li>Eliminación completa de virus, malware y programas basura (<em>bloatware</em>).</li>
                             <li>Aceleración del tiempo de inicio del sistema y optimización de servicios en segundo plano.</li>
                             <li>Limpieza profunda de archivos temporales y registro.</li>
                         </ul>
